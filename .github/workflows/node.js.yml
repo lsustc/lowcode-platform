@@ -37,8 +37,7 @@ jobs:
   
     # Git设置
     - name: Git Set
-      run: git config --global user.email "lsustc@mail.ustc.edu.cn"
-           git config --global user.name "lsustc"
+      run: git config --global user.email "lsustc@mail.ustc.edu.cn" && git config --global user.name "lsustc"
   
     # 上传
     - name: Publish
