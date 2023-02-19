@@ -27,13 +27,13 @@ jobs:
       with:
         python-version: '2.7'
    
-#     # 装依赖
-#     - name: Install
-#       run: python --version && cd editor && yarn
+    # 装依赖
+    - name: Install
+      run: python --version && cd editor && yarn
     
-#     # 打包
-#     - name: Build
-#       run: cd editor && yarn run editor:build
+    # 打包
+    - name: Build
+      run: cd editor && yarn run editor:build
   
     # Git设置
     - name: Git Set
