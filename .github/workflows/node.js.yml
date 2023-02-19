@@ -26,7 +26,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        
+   
+    # editor编辑器
+    - name: Editor
+      run: cd ./editor
     # 装依赖
     - name: Install
       run: npm install --force
