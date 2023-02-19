@@ -42,7 +42,7 @@ jobs:
     # 上传
     - name: Publish
 #       run: git add . && git commit -m "update" && git config list
-      run: git config list
+      run: git config --list
     
     - name: Push changes
       uses: ad-m/github-push-action@master
