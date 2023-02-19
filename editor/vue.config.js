@@ -9,7 +9,7 @@ switch (process.env.PAGE) {
       entry: 'src/client.js',
       template: 'src/client.tpl',
       outputDir: `dist/${config.VIEW_NAME || 'view'}`,
-      publicPath: '/editor/dist/' + config.VIEW_NAME,
+      publicPath: '/lowcode-platform/editor/dist/' + config.VIEW_NAME,
       port: 8566,
     }
     break
@@ -19,7 +19,7 @@ switch (process.env.PAGE) {
       entry: 'src/editor.js',
       template: 'src/editor.tpl',
       outputDir: `dist/${config.EDITOR_NAME || 'editor'}`,
-      publicPath: '/editor/dist/' + config.EDITOR_NAME,
+      publicPath: '/lowcode-platform/editor/dist/' + config.EDITOR_NAME,
       title: config.EDITOR_TITLE,
       port: 8565,
       externals: {
