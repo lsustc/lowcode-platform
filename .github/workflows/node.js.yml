@@ -37,6 +37,6 @@ jobs:
       
     # 上传
     - name: Publish
-      run: git add . && git commoit -m "update" && git push
+      run: git add . && git commit -m "update" && git push
       
     
