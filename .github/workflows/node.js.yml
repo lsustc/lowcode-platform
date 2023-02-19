@@ -29,7 +29,7 @@ jobs:
    
     # 装依赖
     - name: Install
-      run: python --version && cd editor && npm install --force
+      run: python --version && cd editor && yarn
     
     # 打包
     - name: Build
