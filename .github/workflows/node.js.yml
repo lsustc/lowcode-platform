@@ -33,6 +33,6 @@ jobs:
     
     # 打包
     - name: Build
-      run: cd editor && yarn run build
+      run: cd editor && yarn run editor:build
       
     
