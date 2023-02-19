@@ -14,27 +14,18 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
     - uses: actions/checkout@v3
     
-    # editor编辑器
-    - name: Editor
-      run: cd ./editor
     
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 16.15.0
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        node-version: 16.15.0
    
     # 装依赖
     - name: Install
-      run: npm install --force
+      run: cd editor && npm install --force
     
     # 打包
     - name: Build
