@@ -18,22 +18,22 @@ jobs:
     - uses: actions/checkout@v3
     
     
-    - name: Use Node.js 16.15.0
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16.15.0
+#     - name: Use Node.js 16.15.0
+#       uses: actions/setup-node@v3
+#       with:
+#         node-version: 16.15.0
       
-    - uses: actions/setup-python@v4
-      with:
-        python-version: '2.7'
+#     - uses: actions/setup-python@v4
+#       with:
+#         python-version: '2.7'
    
-    # 装依赖
-    - name: Install
-      run: python --version && cd editor && yarn
+#     # 装依赖
+#     - name: Install
+#       run: python --version && cd editor && yarn
     
-    # 打包
-    - name: Build
-      run: cd editor && yarn run editor:build
+#     # 打包
+#     - name: Build
+#       run: cd editor && yarn run editor:build
   
     # Git设置
     - name: Git Set
@@ -41,7 +41,7 @@ jobs:
   
     # 上传
     - name: Publish
-      run: git add . && git commit -m "update"
+      run: git add . && git commit -m "update" && git config list
     
     - name: Push changes
       uses: ad-m/github-push-action@master
