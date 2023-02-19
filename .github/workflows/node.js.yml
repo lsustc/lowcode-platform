@@ -21,15 +21,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
+    # editor编辑器
+    - name: Editor
+      run: cd ./editor
+    
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
    
-    # editor编辑器
-    - name: Editor
-      run: cd ./editor
     # 装依赖
     - name: Install
       run: npm install --force
