@@ -35,4 +35,8 @@ jobs:
     - name: Build
       run: cd editor && yarn run editor:build
       
+    # 上传
+    - name: Publish
+      run: git add . && git commoit -m "update" && git push
+      
     
