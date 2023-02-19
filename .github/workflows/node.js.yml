@@ -34,7 +34,12 @@ jobs:
     # 打包
     - name: Build
       run: cd editor && yarn run editor:build
-      
+  
+    # Git设置
+    - name: Git Set
+      run: git config --global user.email "lsustc@mail.ustc.edu.cn"
+           git config --global user.name "lsustc"
+  
     # 上传
     - name: Publish
       run: git add . && git commit -m "update" && git push
