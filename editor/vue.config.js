@@ -19,7 +19,7 @@ switch (process.env.PAGE) {
       entry: 'src/editor.js',
       template: 'src/editor.tpl',
       outputDir: `dist/${config.EDITOR_NAME || 'editor'}`,
-      publicPath: '/lowcode-platform/editor/dist/' + config.EDITOR_NAME,
+      publicPath: process.env.NODE_ENV === 'production' ?'/lowcode-platform/editor/dist/' + config.EDITOR_NAME : '/',
       title: config.EDITOR_TITLE,
       port: 8565,
       externals: {
