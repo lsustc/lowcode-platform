@@ -31,7 +31,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 module.exports = {
-  publicPath: '/' + config.ADMIN_NAME,
+  publicPath: '/lowcode-platform/admin/dist/' + config.ADMIN_NAME,
   assetsDir: 'static',
   outputDir: `dist/${config.ADMIN_NAME || 'admin'}`,
   lintOnSave: process.env.NODE_ENV !== 'production',
