@@ -14,5 +14,5 @@ module.exports = {
   ADMIN_PATH: 'https://lsustc.github.io/lowcode-platform/admin/dist/admin/', // 管理后台访问地址
   EDITOR_PATH: 'https://lsustc.github.io/lowcode-platform/editor/dist/editor/', // 编辑器访问地址
   VIEW_PATH: 'https://lsustc.github.io/lowcode-platform/editor/dist/view/', // 页面客户端访问地址
-  API_PATH: 'http://124.222.118.195:7051/api', // api 服务端访问地址
+  API_PATH: 'https://lsustc.com:7051/api', // api 服务端访问地址
 }
