@@ -9,6 +9,9 @@
 * 则可以保持以下配置（无需配置）即可，否则，请将 API_PATH 配置为 api 服务外部实际访
 * 问路径，如 http://abc.125:7051/api
 */
-
 module.exports = {
+  ADMIN_PATH: 'https://lsustc.github.io/lowcode-platform/admin/dist/admin/', // 管理后台访问地址
+  EDITOR_PATH: 'https://lsustc.github.io/lowcode-platform/editor/dist/editor/', // 编辑器访问地址
+  VIEW_PATH: 'https://lsustc.github.io/lowcode-platform/editor/dist/view/', // 页面客户端访问地址
+  API_PATH: 'http://124.222.118.195:7051/api', // api 服务端访问地址
 }
