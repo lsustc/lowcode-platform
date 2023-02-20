@@ -32,7 +32,7 @@
     "monaco-editor": "0.15.2",
     "monaco-editor-webpack-plugin": "1.5.3",
     "onigasm": "^2.2.1",
-    "qrcode": "^1.4.4",
+    "qrcode": "1.4.4",
     "rider": "^2.0.0",
     "vscode-textmate": "^4.0.1",
     "vue": "2.6.11",
