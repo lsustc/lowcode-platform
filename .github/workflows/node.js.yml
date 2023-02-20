@@ -33,9 +33,13 @@ jobs:
     - name: Install
       run: python --version && cd editor && yarn
     
-    # 打包
-    - name: Build
+    # 打包编辑器
+    - name: Build Editor
       run: cd editor && yarn run editor:build
+  
+    # 打包管理平台
+    - name: Build Admin
+      run: cd admin && npm install --force && npm run build
   
     # Git设置
     - name: Git Set
