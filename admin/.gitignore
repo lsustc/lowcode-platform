@@ -3,7 +3,7 @@
 .DS_Store
 .idea
 build
-dist
+#dist
 node_modules
 .gitkeep
 converage
