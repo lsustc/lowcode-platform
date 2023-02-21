@@ -1,0 +1,105 @@
+<!DOCTYPE html><html rem-is-max-limit=true><head><meta charset=utf-8><title></title><meta name=viewport id=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=renderer content=webkit><meta name=apple-mobile-web-app-capable content=yes><meta name=full-screen content=yes><meta name=x5-fullscreen content=true><meta name=format-detection content="telephone=no"><link type=text/css rel=stylesheet href=//s.thsi.cn/sns/lib/front/thsc-theme/ths-theme.min.css><link type=text/css rel=stylesheet href=//s.thsi.cn/cd/kernel-thslc-component-materials-container/functional-comp/front/thsc-hxmui/1.0.3/style/index.css><link type=text/css rel=stylesheet href=//s.thsi.cn/hxapp/m/zixun/css/backWash_remx_v4.css><style>html,
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      html body > .desktop-bg,
+      html body > .app-wrapper {
+        display: none;
+      }
+
+      html.is-desktop *:not(body)::-webkit-scrollbar {
+        width: 0 !important;
+      }
+      html.is-desktop *:not(body) {
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+      }
+
+      html.for-mobile body {
+        background-color: #f5f5f5;
+      }
+      html.for-mobile body .app {
+        overflow-x: hidden;
+      }
+
+      html.is-desktop body > .app-wrapper {
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: block;
+        width: 1140px;
+        height: auto;
+        min-height: 100%;
+        margin: 0 auto;
+      }
+      html.is-desktop.for-mobile body > .app-wrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 407px;
+        height: 695px;
+        min-height: unset;
+        margin-left: -203px;
+        margin-top: -347px;
+        background-image: url(https://s.thsi.cn/cd/kernel-thslc-editor-container/view/static/img/phone.png);
+      }
+
+      html.is-desktop.for-mobile .app-wrapper > .app-fixed {
+        width: 320px;
+        height: 567px;
+        position: absolute;
+        left: 43px;
+        top: 60px;
+        background-color: #f5f5f5;
+        overflow: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
+      }
+
+      html.is-desktop.for-mobile .app-fixed > .app {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background-color: #f5f5f5;
+      }
+
+      html.is-desktop.for-mobile body > .desktop-bg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        pointer-events: none;
+        background-image: url(https://s.thsi.cn/cd/kernel-thslc-editor-container/view/static/img/for_pc_background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+      }
+      .loading-img {
+        vertical-align: top;
+        position: fixed;
+        left: 50%;
+        top: 44%;
+        transform: translate(-50%, -50%);
+        width: 20%;
+        max-width: 100px;
+        height: auto;
+      }</style><link href=//s.thsi.cn/cd/kernel-thslc-editor-container/view/static/css/chunk-vendors.60946a43.css rel=stylesheet><link href=//s.thsi.cn/cd/kernel-thslc-editor-container/view/static/css/index.511705d6.css rel=stylesheet></head><body><div id=desktop-bg class=desktop-bg></div><div id=app-wrapper class=app-wrapper><div id=app-fixed class=app-fixed id=app-fixed><div id=app class=app></div></div></div><script>if (!navigator.userAgent.match(/mobile|iphone|ipad|android/i) || window.innerWidth >= 768) {
+        document.documentElement.classList.add('is-desktop');
+        window.isDesktop = !0;
+      } else {
+        document.querySelector('#desktop-bg').remove();
+        document.body.appendChild(document.querySelector('#app'));
+        document.querySelector('#app-wrapper').remove();
+      }
+      window.loadingStartTime = new Date() - 0;
+      window.AreaData = [];
+      window.html2canvas = {};
+      window.Truck = {};
+      window.pageMode = 'client';</script><script src=//s.thsi.cn/cb?js/basic/common/rem.min.js crossorigin=anonymous></script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/editor/static/js/babel.min.js></script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/view/static/js/fastclick.js crossorigin=anonymous></script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/view/static/js/vue.runtime.v2_6_11.min.js crossorigin=anonymous></script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/view/static/js/vuex.v2_0_0.min.js crossorigin=anonymous></script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/view/static/js/vue-router.v2_0_1.min.js crossorigin=anonymous></script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/view/static/js/init-theme.js crossorigin=anonymous></script><script src=//s.thsi.cn/cb?;cd/ths-frontend-common-lib-container/v1.3.5/common/;basic.js;bridge.js;cd/ths-frontend-common-lib-container/v1.3.5/business/;stat.js></script><script src=//s.thsi.cn/cd/kernel-thslc-component-materials-container/functional-comp/front/thsc-hxmui/1.0.3/index.js crossorigin=anonymous></script><script src=//s.thsi.cn/cd/kernel-thslc-component-materials-container/js/vue-i18n.js></script><script src=//s.thsi.cn/cb?webprivate/lib/axios.min.js></script><script src=//s.thsi.cn/cb?cd/iwc-datav-d3-charts/d3_charts_0.4.32.common.js></script><script src=//s.thsi.cn/cd/ths-frontend-common-lib-container/v1.3.9/common/echarts.min.js></script><script src=//s.thsi.cn/cd/ths-frontend-common-lib-container/business/thsIphoneXAdapter.js></script><script src=//s.thsi.cn/cb?js/m/v2.7/common/zepto.js;js/basic/stockph_v2/commonFunc.js;cd/website-thsc-f10-utils/1.4.37/;thsc-f10-utils.js;commonStatF10Vue.js></script><script src=//s.thsi.cn/hxapp/m/zixun/js/backWash_v4.js></script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/view/static/js/chunk-vendors.7be012cd.js></script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/view/static/js/index.4a1911af.js></script></body></html>

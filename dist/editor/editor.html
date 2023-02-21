@@ -1,0 +1,74 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><title>创意平台</title><meta name=renderer content=webkit><meta name=apple-mobile-web-app-capable content=yes><meta name=full-screen content=yes><meta name=x5-fullscreen content=true><meta name=format-detection content="telephone=no"><link type=text/css rel=stylesheet href=//s.thsi.cn/sns/lib/front/thsc-theme/ths-theme.min.css><link type=text/css rel=stylesheet href=//s.thsi.cn/cd/kernel-thslc-component-materials-container/functional-comp/front/thsc-hxmui/1.0.3/style/index.css><style>html,body{padding:0;margin:0;background-color:#262626;}.pre-loading-wrapper{position:relative;margin:200px auto 0;width:50px;height:50px}.pre-loading-wrapper .loading-item{position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;opacity:.6;background-color:#fc8700;-webkit-animation:loading-bounce 2s infinite ease-in-out;animation:loading-bounce 2s infinite ease-in-out}.pre-loading-wrapper .loading-item-2{-webkit-animation-delay:-1s;animation-delay:-1s}@-webkit-keyframes loading-bounce{0%,100%{-webkit-transform:scale(0);transform:scale(0)}50%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes loading-bounce{0%,100%{-webkit-transform:scale(0);transform:scale(0)}50%{-webkit-transform:scale(1);transform:scale(1)}}</style><link href=//s.thsi.cn/cd/kernel-thslc-editor-container/editor/static/css/chunk-vendors.89b09472.css rel=stylesheet><link href=//s.thsi.cn/cd/kernel-thslc-editor-container/editor/static/css/index.5f61e9b5.css rel=stylesheet></head><body><div id=app class=app><div class=pre-loading-wrapper><div class="loading-item loading-item-1"></div><div class="loading-item loading-item-2"></div><div class="loading-item loading-item-3"></div></div></div><script>window.EDIT_TYPE = 'NOT_INIT'
+  window.loadingStartTime = new Date()-0
+  window.AreaData = []
+  window.pageMode = 'editor';</script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/editor/static/js/babel.min.js></script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/editor/static/js/babel-polyfill.v6_20_0.min.js></script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/editor/tinymce4.7.13/tinymce.min.js></script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/editor/static/js/plupload.full.min.js></script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/editor/static/js/html2canvas.min.js></script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/editor/static/js/vue.runtime.v2_6_11.min.js></script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/editor/static/js/vuex.v2_0_0.min.js></script><script src=//s.thsi.cn/cb?;cd/ths-frontend-common-lib-container/v1.3.5/common/;basic.js;bridge.js;cd/ths-frontend-common-lib-container/v1.3.5/business/;stat.js></script><script src=//s.thsi.cn/cb?webprivate/lib/axios.min.js></script><script src=//s.thsi.cn/cb?cd/iwc-datav-d3-charts/d3_charts_0.4.32.common.js></script><script src=//s.thsi.cn/cd/ths-frontend-common-lib-container/v1.3.9/common/echarts.min.js></script><script src=//s.thsi.cn/cd/kernel-thslc-component-materials-container/functional-comp/front/thsc-hxmui/1.0.3/index.js></script><script src=//s.thsi.cn/cd/kernel-thslc-component-materials-container/js/vue-i18n.js></script><script id=monitor-script api_key=ths-kernel uuid=6f6cb5d439d14f75318ae5fb1872620a src=//s.thsi.cn/cd/kernel-thslc-component-materials-container/js/monitor.js crossorigin=anonymous></script><script src=//s.thsi.cn/cb?js/m/v2.7/common/zepto.js;js/basic/stockph_v2/commonFunc.js;cd/website-thsc-f10-utils/1.4.37/;thsc-f10-utils.js;commonStatF10Vue.js></script><script>var indexResource = window.performance.now();
+    var sampleRate = 0.1; // 采样率;
+
+    function getParams() {
+      var sendParams = {};
+
+      // 基本性能计算
+      if (window.feMonitor) {
+
+        var moduleName = window.pageMode === 'client' ? 'thslc-client' : 'thslc-editor123555';
+        window.feMonitor.setConfig({moduleName})
+
+        var perFormanceInfo = window.feMonitor.getPerformance();
+        if (perFormanceInfo.newPerformanceLog) {
+          var perEntriesKeys = [];
+          var perEntriesValues = [];
+          var networkList = perFormanceInfo.slowInfo.networkList || [];
+          var perEntriesLen = networkList.length;
+          // 压缩下entries，日志只支持32k
+          for (var i = 0; i < perEntriesLen; i++) {
+            try {
+              if (perEntriesKeys.length <= 0) {
+                //keys有兼容问题，所以先引入polyfill.js进行兼容
+                perEntriesKeys = Object.keys(networkList[i]);
+              }
+              perEntriesValues.push(Object.values(networkList[i]));
+            } catch (err) {}
+          }
+          sendParams = {
+            user_id: perFormanceInfo.userInfo.userid,
+            http_user_agent: perFormanceInfo.userInfo.userAgent,
+            webviewURL: perFormanceInfo.projectInfo.url,
+            perEntriesKeys: perEntriesKeys,
+            perEntries: perEntriesValues,
+            domReady: perFormanceInfo.newPerformanceLog.domReady,
+            performanceInfo: perFormanceInfo.newPerformanceLog,
+            flags: 'performance',
+            pkgVersion: window._pkgVer
+          };
+          Object.assign(sendParams, perFormanceInfo.newPerformanceLog);
+        }
+      }
+      return sendParams;
+    }
+
+    function sendPerformance(sendParams) {
+      try {
+          var randomRate = Math.random();
+        if (sampleRate <= randomRate) {
+            return;
+        }
+        window.feMonitor.request(window.feMonitor.config.elkURL, window.feMonitor.formatElkLog(sendParams));
+      } catch (e) {
+        console.log('send performance data error', e);
+      }
+    }
+
+    window.onload = function () {
+      setTimeout(function () {
+        try {
+          var sendParams = getParams();
+          // 性能日志上报
+          if (window.feMonitor) {
+            sendPerformance(sendParams);
+            return;
+          }
+        } catch (error) {
+          console.log('performance send fail', error);
+        }
+      }, 5000);
+    };</script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/editor/static/js/chunk-vendors.1f81c31c.js></script><script src=//s.thsi.cn/cd/kernel-thslc-editor-container/editor/static/js/index.94ecca56.js></script></body></html>
